@@ -34,5 +34,11 @@ function showbooks() {
 
 function editbook(index){
     const book = books[index];
-    document.getElementById('bookName').value
+    document.getElementById('bookName').value = book.name;
+    document.getElementById('AuthorName').value = book.name;
+    document.getElementById('bookDescription').value = book.bookDescription;
+    Document.getElementById('pagesNumber').value = book.pagesNumber;
+    books.splice(index, 1); //remove a entrada antiga
+
+    showbooks(); //atualiza a lista
 }
