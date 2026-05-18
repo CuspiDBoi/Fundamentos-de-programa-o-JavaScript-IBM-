@@ -42,3 +42,10 @@ function editbook(index){
 
     showbooks(); //atualiza a lista
 }
+
+function clearInputs(){
+    document.getElementById('bookName').value = '';
+    document.getElementById('authorName').value = '';
+    document.getElementById('bookDescription').value = '';
+    document.getElementById('pagesNumber').value = '';
+}
