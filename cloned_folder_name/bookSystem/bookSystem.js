@@ -1,10 +1,10 @@
 let books = [];
 
 function addBook(){
-    const bookName = document.getElementByIdbookName("bookNamebookName");
-    const authorName = document.getElementById("authorName");
-    const bookDescription = document.getElementById("bookDescription");
-    const pagesNumber = document.getElementById("pagesNumber");
+    const bookName = document.getElementById("bookName").value;
+    const authorName = document.getElementById("authorName").value;
+    const bookDescription = document.getElementById("bookDescription").value;
+    const pagesNumber = document.getElementById("pagesNumber").value;
 
     if(bookName && authorName && bookDescription && !isNaN(pagesNumber)){
         const book = {
@@ -27,7 +27,10 @@ function showbooks() {
         <p><strong>Nome do Autor:</strong> ${book.authorName}</p>
         <p><strong>Descrição do Livro:</strong> ${book.bookDescription}</p>
         <p><strong>Nº de Páginas:</strong> ${book.pagesNumber} página(s)</p>
-        <button onclick="editbook(${index})">Editar</button>`
+        <button onclick="editbook(${index})">Editar</button>
+        <button onclick="deleteBooks(${index})">Deletar</button>
+        `
+        
     );
     document.getElementById('books').innerHTML = booksDiv.join('');
 }
@@ -35,9 +38,9 @@ function showbooks() {
 function editbook(index){
     const book = books[index];
     document.getElementById('bookName').value = book.name;
-    document.getElementById('AuthorName').value = book.name;
+    document.getElementById('authorName').value = book.authorName;
     document.getElementById('bookDescription').value = book.bookDescription;
-    Document.getElementById('pagesNumber').value = book.pagesNumber;
+    document.getElementById('pagesNumber').value = book.pagesNumber;
     books.splice(index, 1); //remove a entrada antiga
 
     showbooks(); //atualiza a lista
@@ -48,4 +51,13 @@ function clearInputs(){
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
+}
+
+function deleteBooks(index){
+    const book = books [index];
+    books.splice(index, 1);
+
+    alert("Livro Deletado")
+    showbooks();
+    
 }
