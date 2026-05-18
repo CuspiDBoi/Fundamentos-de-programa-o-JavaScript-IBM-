@@ -41,6 +41,7 @@ function endTest(){
     outputDiv.innerHTML = "<h2>Resultados do Teste de Digitação:</h2>" +
                 "<p>Palavras Digitadas: " + typedWords + "</p>" +
                 "<p>Tempo Decorrido: " + timeElapsed.toFixed(2) + " segundos</p>" +
-                "<p>Palavras Por Minuto (WPM): " + wpm + "</p>";
+                "<p>Palavras Por Minuto (WPM): " + wpm +"</p>" + 
+                "<p> Largura total: " + userTypedText.length + "/<p>";
 }
 
