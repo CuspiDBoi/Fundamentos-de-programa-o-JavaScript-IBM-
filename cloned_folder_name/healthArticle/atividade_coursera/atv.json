@@ -1,0 +1,56 @@
+{
+  "usuario": {
+    "nome": "Alex Silva",
+    "nivel": "Intermediário",
+    "trilha_estudos": "Desenvolvimento Web Full-Stack"
+  },
+  "cronograma_revisao": {
+    "total_horas_semanais": 15,
+    "dias_ativos": ["Segunda", "Quarta", "Sexta"]
+  },
+  "topicos": [
+    {
+      "id": 1,
+      "materia": "Front-end",
+      "assunto": "Manipulação de DOM com JavaScript",
+      "concluido": true,
+      "importancia": "Alta",
+      "flashcards": [
+        {
+          "pergunta": "O que significa DOM?",
+          "resposta": "Document Object Model. É uma interface de programação que representa documentos HTML e XML como nós e objetos."
+        },
+        {
+          "pergunta": "Qual método do JS seleciona um elemento pelo seu ID?",
+          "resposta": "document.getElementById('id_do_elemento')"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "materia": "Back-end",
+      "assunto": "Introdução a APIs RESTful",
+      "concluido": false,
+      "importancia": "Crítica",
+      "recursos_uteis": [
+        "https://developer.mozilla.org/pt-BR/docs/Glossary/REST",
+        "Livro: Entendendo Algoritmos"
+      ],
+      "proximos_passos": [
+        "Aprender os métodos HTTP (GET, POST, PUT, DELETE)",
+        "Entender códigos de status (200, 201, 404, 500)"
+      ]
+    },
+    {
+      "id": 3,
+      "materia": "Banco de Dados",
+      "assunto": "Modelagem Relacional (SQL)",
+      "concluido": false,
+      "importancia": "Média",
+      "proximos_passos": [
+        "Estudar Chaves Primárias (PK) e Chaves Estrangeiras (FK)",
+        "Praticar comandos de JOIN"
+      ]
+    }
+  ]
+}
